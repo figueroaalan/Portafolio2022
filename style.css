@@ -1,21 +1,42 @@
-.boton-editar{
-    margin-left: 50px;
+.card-subtitulos{
+    display: flex;
+    color: violet;
+   
+
+    }
+.card-2{
+    left: 50px;
 }
 
 .card-title{
-    color: aqua;
-}
-.card-2{
-    color: violet !important; 
-}
-
-.center{
+    color: aqua !important;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 50px;
     height: auto;
     left: "200px";
+}
+.tittle-2{
+    color: violet !important; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    height: auto;
+    left: "200px";
+
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: auto;
+    height: auto;
+    left: "200px";
     
 }
+
+
 
