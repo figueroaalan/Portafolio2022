@@ -7,7 +7,7 @@ import  {EncabezadoComponent} from './encabezado/encabezado.component';
 const routes: Routes = [
   {path: 'educacion', component: EducacionComponent},
   {path: 'experiencia', component: ExperienciaComponent},
-  {path: 'encabezado', component: EncabezadoComponent}
+  {path: '', component: EncabezadoComponent}
 ];
 
 @NgModule({
