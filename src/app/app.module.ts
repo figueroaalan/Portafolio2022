@@ -9,6 +9,7 @@ import { EducacionComponent } from './educacion/educacion.component';
 import { EncabezadoComponent } from './encabezado/encabezado.component';
 import { AddEditExpComponent } from './experiencia/add-edit-exp/add-edit-exp.component';
 import { ShowExpComponent } from './experiencia/show-exp/show-exp.component';
+import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { ShowExpComponent } from './experiencia/show-exp/show-exp.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [SharedService],
   bootstrap: [AppComponent]

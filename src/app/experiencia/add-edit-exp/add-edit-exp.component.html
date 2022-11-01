@@ -1,1 +1,25 @@
-<p>add-edit-exp works!</p>
+<div class="form-froup row">
+    <label class="col-sm-2 col-form-label">Titulo</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="ExperienciaTitulo"
+        placeholder="Ingrese el titulo del trabajo">
+    </div>
+    <label class="col-sm-2 col-form-label">Descripcion</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="experienciaDescripcion"
+        placeholder="Ingrese una descripcion de su puesto">
+    </div>
+    <label class="col-sm-2 col-form-label">Fecha Inicio</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="experienciaFecha_inicio"
+        placeholder="Ingrese cuando comenzo a trabajar. Formato dd/mm/YYYY">
+    </div>
+</div>
+
+<button (click)="agregarExperiencia()" *ngIf="exp.ExperienciaId==0" class="btn btn-primary">
+    Agregar
+</button>
+
+<button (click)="actualizarExperiencia()" *ngIf="exp.ExperienciaId!=0" class="btn btn-primary">
+    Actualizar
+</button>

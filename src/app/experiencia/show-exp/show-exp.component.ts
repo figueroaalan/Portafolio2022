@@ -25,10 +25,10 @@ export class ShowExpComponent implements OnInit {
     this.exp={
       ExperienciaId:0,
       ExperienciaTitulo:"",
-      ExperienciaDescipcion:"",
-      ExperienciaFechaInicio:""
+      ExperienciaDescripcion:"",
+      ExperienciaFecha_inicio:""
     }
-    this.ModalTitle="Agregar Departamento";
+    this.ModalTitle="Agregar Experiencia";
     this.ActivateAddEditExpComp=true;
   }
 
@@ -39,8 +39,7 @@ export class ShowExpComponent implements OnInit {
 
   deleteClick(item:any){
     if(confirm('¿Estás seguro de que quieres eliminar este registro?')){
-      this.service.eliminarExperiencia(item.ExperienciaId).subscribe(data=>{
-        alert(data.toString());
+      this.service.eliminarExperiencia(item.id).subscribe(data=>{
         this.refreshExpList();
       })
     }

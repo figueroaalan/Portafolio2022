@@ -1,1 +1,64 @@
-<p>shows</p>
+<div class="container">
+    <div class="row">
+        <table border="0" cellpadding="0" cellspacing="0" rowspacing="100">
+            <tr>
+                <td>
+                    <button type="button" class="btn btn-dark" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal" (click)="addClick()" data-backdrop="static"
+                        data-keyboard="false">
+                        <img class="boton-agregar" src="assets\img\agregar.png" alt="rebautizar iconos" width="50"
+                        height="50">
+                    </button>
+                </td>
+            </tr>
+            <tr *ngFor="let exp of ExperienciatList">
+                <td>
+                    <h2 class="card-subtitulos">{{exp.titulo}}</h2>
+                    <p class="card-text">{{exp.descripcion}}</p>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-dark mr-1" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal" (click)="editClick(exp)" data-backdrop="static"
+                        data-keyboard="false">
+                        <img class="boton-editar" src="assets\img\editar.png" alt="rebautizar iconos" width="50"
+                            height="50">
+                    </button>
+                    <button type="button" class="btn btn-dark mr-1" (click)="deleteClick(exp)">
+                        <img class="boton-eliminar" src="assets\img\eliminar.png" alt="rebautizar iconos" width="50"
+                            height="50">
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">{{ ModalTitle }}</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          (click)="closeClick()"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <app-add-edit-exp
+          [exp]="exp"
+          *ngIf="ActivateAddEditExpComp"
+        ></app-add-edit-exp>
+      </div>
+    </div>
+  </div>
+</div>
