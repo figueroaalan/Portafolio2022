@@ -1,0 +1,60 @@
+ body {
+    background-image: url("src\assets\img\fondo.png");
+ }
+
+ p {
+    color: white;
+ }
+
+ table {
+    border-collapse: separate;
+    border-spacing: 15px 0;
+    }
+    td{
+    padding: 10px;
+    width: 20%;
+    }
+
+    .card-subtitulos{
+        display: flex;
+        color: violet;
+       
+    
+        }
+    .card-2{
+        left: 50px;
+    }
+    
+    .card-title{
+        color: aqua !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px;
+        height: auto;
+        left: "200px";
+    }
+    .tittle-2{
+        color: violet !important; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 25px;
+        height: auto;
+        left: "200px";
+    
+    }
+    
+    .center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: auto;
+        height: auto;
+        left: "200px";
+        
+    }
+    
+    
+    
+    
