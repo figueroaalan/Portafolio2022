@@ -6,7 +6,7 @@ import {Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class SharedService {
-readonly APIUrl="http://localhost:8080/api";
+readonly APIUrl="https://backend-portfolio-dc0k.onrender.com/api";
   constructor(private http:HttpClient) { }
 
   obtenerListaEducacion():Observable<any[]>{
